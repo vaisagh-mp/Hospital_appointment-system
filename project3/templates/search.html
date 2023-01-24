@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+{% load static %}
+
+<center>
+    {% if r %}
+    <h4 style="margin-top: 1em;">You Searched for {{r}}</h4>
+    <br>
+    
+    <div class="container text-center">
+        {% for Doctors in doc %}
+        <div class="card text-center mx-3 my-3" style="width: 18rem; display:inline-block">
+          <img src="{{Doctors.doc_image.url}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <a href="{% url 'booking' %}" style="text-decoration: none; color: darkslategrey;"><h5 class="card-title">{{Doctors.doc_name}}</h5></a>
+            <p class="card-text">{{Doctors.doc_spec}}</p>
+            <a href="{% url 'department' %}" style="text-decoration: none; color: powderblue;"><h5>{{Doctors.dep_name}}</h5></a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+    {% for Department in dpt %}
+        <div class="mx-auto w-50 bg-success text-center text-white p-3 my-3 border border-warning rounded">
+            <h1>{{Department.dept_name}}</h1>
+            <p>{{Department.dept_department}}</p>
+        </div>
+    {% endfor %}
+
+    {% endif %}
+
+
+    {% endblock %}
+</center>

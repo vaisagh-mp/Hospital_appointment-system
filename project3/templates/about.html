@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+About
+{% endblock %}
+
+{% block content %}
+
+
+
+  <h1 class="hed" style="color: rgb(49, 138, 156); padding: 10px;">About City Hospital</h1>
+  <hr>
+  <div class="para">
+    <p class="para text-center" style="font-family:Verdana, Geneva, Tahoma, sans-serif; color: rgb(251, 170, 18);">
+    <b>O</b>ne-stop multi super specialty hospital that will take care of all your health and medical needs. City Hospital, 
+    come up with an expert insight into health services has set highest standards for quality and 
+    care to ensure top-notch healthcare experience.<br>
+
+    Upholding the motto of quality healthcare, adopting state-of-the-art equipment and bringing together most modern facilities,
+    City Hospital  redefines the healthcare scenario of Kerala. Our vision is to assure comprehensive and affordable healthcare for all. 
+    Renowned specialists along with well-trained paramedical staff ensure a top-quality healthcare experience. From diagnosis to analysis,
+    each phase of treatment is bestowed with utmost care and dedication.
+    </p>
+  </div>
+<center>
+  <div class="img">
+    <img src="{% static '\image\best-hospital-in-south-india.jpg' %}">
+  </div>
+
+  <h3 class="h text-center" style="color:rgb(247, 173, 44); padding: 10px;">OPERATION THEATRES</h3>
+  <P class="h text-center">Our fourth generation operation theatres are at par with the bests in th world.</P>
+  <img class="ott" src="{% static '/image/ott.jpg' %}">
+  <h3 class="h text-center" style="color:rgb(247, 173, 44); padding: 10px;">ICUS/CCUS</h3>
+  <P class="h text-center">There are more than 120 ICU beds for various surgical and medical specialties.</P>
+  <img class="icu" src="{% static '/image/icu.jpg' %}">
+  <h3 class="h text-center" style="color:rgb(247, 173, 44); padding: 10px;">HEALTH & LIFESTYLE</h3>
+  <P class="h text-center">The fast pace of modern life leaves little time to keep a check on health.</P>
+  <img class="hel" src="{% static '/image/Types-of-Health-Care-Facilities.jpg' %}">
+</center>
+
+
+
+
+
+{% endblock %}

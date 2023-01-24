@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Doctor
+{% endblock %}
+{% block content %}
+<h1 class="text-center bg-light" style="color: rgb(49, 138, 156);">Our Doctors</h1>
+
+
+
+
+
+<div class="container text-center">
+  {% for d in doct %}
+  <div class="card text-center mx-3 my-3" style="width: 18rem; display:inline-block">
+    <img src="{{d.doc_image.url}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <a href="{% url 'booking' %}" style="text-decoration: none; color: darkslategrey;"><h5 class="card-title">{{d.doc_name}}</h5></a>
+      <p class="card-text">{{d.doc_spec}}</p>
+      <a href="{% url 'department' %}" style="text-decoration: none; color: powderblue;"><h5>{{d.dep_name}}</h5></a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

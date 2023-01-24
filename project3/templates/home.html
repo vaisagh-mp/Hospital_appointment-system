@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<center>
+  <form action="{% url 'search_u' %}" class="d_flex" role="search" method="POST" style="width: 20em;margin-top: 2em;">{% csrf_token %}
+    <input class="form-control me-2" type="text" placeholder="Search for doctors and departments.." aria-label="search" name="r">
+    <button class="btn btn-outline-success" type="Submit" style="margin-top:1em; margin-bottom: 1em;">search</button>
+  </form>
+</center>
+
+<!-- <center>
+  <video class="video" src="https://youtu.be/74DWwSxsVSs" autoplay="" controls=""></video>
+
+</center> -->
+
+
+  <div class="card text-center">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: larger; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: rgb(49, 138, 156);">You will be well <br> Taken care of.</h5>
+      <p class="card-text">Meeting your health care needs is our priority.At City Hospitals,you and your family get the highest quality medical care in a safe and warm-hearted environment.We bring the expertise of experienced doctors and staff and th most advanced technology to provide you 
+        with utmost care and speedy recovery.We are committed to improving health care and treatment through research and educating future health care professionals.
+      </p>
+      <a href="{% url 'booking' %}" class="btn btn-primary">Make an Appointment</a>
+    </div>
+
+  </div>
+  
+  <div class="hos">
+    <img src="{% static '/image/hos.jpg' %}">
+  </div>
+  
+
+
+
+  <h5 class="tit text-center">About Us</h5>
+  <div class="card text-center">
+    <div class="card-body">
+      <h3 class="card-title" style="font-size: larger; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: rgb(49, 138, 156);" >The Embrace of Good Health</h3>
+      <p class="card-text">Every life is precious to us. You are important,and care for you.We at City Hospitals are there for you need us the most.Our hospital is where science,technology and research merge to embrace
+        good health. We are a community of physicians,caregivers,innovators,inventors and researchers and we use tools and knowledge made available by modern science to curve your body and mind.
+      </p>
+      <a href="{% url 'about' %}" class="btn btn-primary">Know More</a>
+    </div>
+
+  </div>
+
+
+  
+{% endblock %}
